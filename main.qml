@@ -60,9 +60,12 @@ ApplicationWindow
                 viewCenter: Qt.vector3d( 0.0, 0.0, 0.0 )
             }
 
-            OrbitCameraController
+            FirstPersonCameraController
             {
                 camera: camera
+                linearSpeed: 500.0
+                acceleration: 0.1
+                deceleration: 1.0
             }
 
             components: [
