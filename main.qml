@@ -71,6 +71,14 @@ ApplicationWindow
                 deceleration: 1.0
             }
 
+            Entity
+            {
+                components: [
+                PointLight {},
+                    Transform { translation: camera.position }
+                ]
+            }
+
             components: [
                 RenderSettings
                 {
