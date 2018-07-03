@@ -106,7 +106,12 @@ ApplicationWindow
                         rotationX: rot_x.value
                         rotationY: rot_y.value
                         rotationZ: rot_z.value
+                    },
+                    ObjectPicker
+                    {
+                        onPressed: { console.log("Object clicked!") }
                     }
+
                 ]
             }
         }
