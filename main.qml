@@ -1,4 +1,4 @@
-import QtQuick.Controls 2.2
+import QtQuick.Controls 2.4
 import QtQuick.Dialogs 1.2
 
 import QtQuick.Scene3D 2.0
@@ -7,6 +7,9 @@ import Qt3D.Core 2.0
 import Qt3D.Render 2.0
 import Qt3D.Input 2.0
 import Qt3D.Extras 2.0
+
+import QtQuick 2.11
+import QtQuick.Layouts 1.3
 
 ApplicationWindow
 {
@@ -89,9 +92,58 @@ ApplicationWindow
                     SceneLoader
                     {
                         id: sceneLoader
+                    },
+                    Transform
+                    {
+                        rotationX: rot_x.value
+                        rotationY: rot_y.value
+                        rotationZ: rot_z.value
                     }
                 ]
             }
         }
     }
+    ColumnLayout
+        {
+            id: rot_xyz
+            anchors.left: parent.horizontalCenter
+            anchors.leftMargin: parent.width * 0.25
+            anchors.right: parent.right
+            anchors.rightMargin: 15
+            anchors.top: scene3D.top
+            spacing: 5
+
+            Text { text: "Object"; font.bold: true }
+            Text { text: "Rotation" }
+            RowLayout {
+                Text { text: "X" }
+                Slider {
+                    id: rot_x
+                    Layout.fillWidth: true
+                    from: 0
+                    to: 360
+                    value: 0
+                }
+            }
+            RowLayout {
+                Text { text: "Y" }
+                Slider {
+                    id: rot_y
+                    Layout.fillWidth: true
+                    from: 0
+                    to: 360
+                    value: 0
+                }
+            }
+            RowLayout {
+                Text { text: "Z" }
+                Slider {
+                    id: rot_z
+                    Layout.fillWidth: true
+                    from: 0
+                    to: 360
+                    value: 0
+                }
+            }
+        }
 }
