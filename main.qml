@@ -113,6 +113,7 @@ ApplicationWindow
                     {
                         onPressed: {
                             console.log("Object clicked! Pressed at world-intersection: ", pick.worldIntersection)
+                            console.log("Triangle index: ", pick.triangleIndex)
                         }
                     }
 
