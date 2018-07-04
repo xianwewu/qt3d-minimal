@@ -88,6 +88,7 @@ ApplicationWindow
                         camera: camera
                     }
                     pickingSettings.pickMethod: PickingSettings.TrianglePicking
+                    pickingSettings.faceOrientationPickingMode: pickingSettings.FrontAndBackFace
                 },
                 InputSettings
                 {
