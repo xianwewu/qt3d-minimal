@@ -87,6 +87,7 @@ ApplicationWindow
                         clearColor: Qt.rgba(0, 0.5, 1, 1)
                         camera: camera
                     }
+                    pickingSettings.pickMethod: PickingSettings.TrianglePicking
                 },
                 InputSettings
                 {
