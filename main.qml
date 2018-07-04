@@ -87,6 +87,7 @@ ApplicationWindow
                         clearColor: Qt.rgba(0, 0.5, 1, 1)
                         camera: camera
                     }
+                    pickingSettings.pickMethod: PickingSettings.TrianglePicking
                 },
                 InputSettings
                 {
@@ -106,7 +107,12 @@ ApplicationWindow
                         rotationX: rot_x.value
                         rotationY: rot_y.value
                         rotationZ: rot_z.value
+                    },
+                    ObjectPicker
+                    {
+                        onPressed: { console.log("Object clicked!") }
                     }
+
                 ]
             }
         }
